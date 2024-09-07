@@ -7,10 +7,14 @@
         {name: 'Project 3', icon: 'fa-solid fa-cart-shopping'},
     ]
 
+    const birthYear = 2000;
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - birthYear;
+
     let aboutData = [
-        {name: 'Introduction', content: 'I am a Full Stack Developer with a passion for creating beautiful and functional websites. I have experience in building websites using HTML, CSS, JavaScript, and React. I am also proficient in using Node.js, Express, and MongoDB to build the backend of websites. I am always looking for new opportunities to learn and grow as a developer.'},
-        {name: 'Education', content: 'I have a Bachelor\'s degree in Computer Science from the University of California, Berkeley. I graduated with honors and have been working as a developer for the past 5 years.'},
-        {name: 'Experience', content: 'I have worked on a variety of projects, ranging from small websites to large web applications. I have experience working with clients to understand their needs and deliver high-quality websites that meet their requirements.'},
+        {name: 'Introduction', content: `Hi, I'm Peerzada Anzar Azmat, a ${age}-year-old web developer from Bangalore, India. I was born and brought up in Srinagar, Jammu and Kashmir. I have a strong passion for web development and I'm always eager to learn new technologies and techniques.<br/><br/> I have experience in developing websites using HTML, CSS, JavaScript, and Bootstrap. I'm also familiar with other technologies like ReactJS, NodeJS, and MongoDB. In my free time, I like to work on personal projects and learn new things.`},
+        {name: 'Education', content: 'I have a Bachelor\'s degree in Computer Science from the Visvesvaraya Technological University. I graduated in the year 2023. My early education was in Srinagar, where I completed my schooling from the Burn Hall School where I devloped a keen interest in web development and programming. This interest led me to pursue a degree in Computer Science.'},
+        {name: 'Experience', content: 'I started freelance web development during my school days. I have experience in building websites from scratch as well as customizing existing websites. After graduating, I started working as a full stack developer at Eurofins IT Solutions where I work on a .NET / Angular / WPF based projects. <br/><br/> I continue to learn and grow as a developer and I am always looking for new opportunities to work on interesting projects.'},
     ]
 </script>
 
@@ -28,13 +32,13 @@
             <a class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl 
                 poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer" 
                 href="#contact">
-                <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover: translate-x-full z-0 duration-200" />
+                <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover: translate-x-full z-0 duration-200" /> 
                 <h4 class="relative z-9">Get in touch &rarr;</h4>
             </a>
         </div>
         
         <div class="relative shadow-2xl grid place-items-center">
-            <img src={"images/anzar.png"} alt="Anzar Peerzada" class="z-[2] max-h-[70vh] object-cover" />
+            <img src={"images/anzar.png"} alt="Anzar Peerzada" class="z-[2] max-h-[70vh] object-cover rounded-full" />
         </div>  
     </section>
 
@@ -82,7 +86,7 @@
                     <p class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">0{index + 1}</p>
                     <div class="flex flex-col gap-6 sm:gap-8">
                         <h3 class="text-2xl sm:text-3xl md:text-5xl">{data.name}</h3>
-                        <p class="text-base sm:text-lg md:text-xl">{data.content}</p>
+                        <p class="text-base sm:text-lg md:text-xl">{@html data.content}</p>
                     </div>
                 </div>
             {/each}
